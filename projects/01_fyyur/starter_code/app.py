@@ -350,7 +350,7 @@ def create_venue_submission():
         db.session.add(venue)
         db.session.commit()
 
-      except:
+      except Exception:
         error = True
         db.session.rollback()
         print(sys.exc_info())
@@ -378,7 +378,7 @@ def delete_venue(venue_id):
         db.session.delete(venue)
         db.session.commit()
 
-      except:
+      except Exception:
         error = True
         db.session.rollback()
         print(sys.exc_info)
@@ -636,7 +636,7 @@ def edit_artist_submission(artist_id):
 
       db.session.commit()
 
-    except:
+    except Exception:
       error = True
       db.session.rollback()
       print(sys.exc_info())
@@ -705,7 +705,7 @@ def edit_venue_submission(venue_id):
 
       db.session.commit()
 
-    except:
+    except Exception:
       error = True
       db.session.rollback()
       print(sys.exc_info())
@@ -759,7 +759,7 @@ def create_artist_submission():
     db.session.add(artist)
     db.session.commit()
 
-  except:
+  except Exception:
     error = True
     db.session.rollback()
     print(sys.exc_info())
@@ -863,7 +863,7 @@ def create_show_submission():
     db.session.add(show)
     db.session.commit()
 
-  except:
+  except Exception:
     error = True
     db.session.rollback()
     print(sys.exc_info())
